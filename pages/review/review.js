@@ -267,7 +267,6 @@ function renderDocument() {
     `;
     });
 
-    // Rastreabilidade
     html += `
     <div class="trace-section">
       <div class="trace-title"><i class="ti ti-sitemap" style="font-size:20px"></i> Rastreabilidade Pedagógica — Gerado pelo SIPE</div>

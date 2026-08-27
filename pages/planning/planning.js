@@ -1,10 +1,7 @@
-// ── DATA ──────────────────────────────────────────────────────────────────────
-
 const planData = {
     Matemática: {
         subjectClass: "subj-mat",
         rows: [
-            // Row 0: 07h30-08h20
             [
                 {
                     subject: "Matemática",
@@ -42,7 +39,6 @@ const planData = {
                     bncc: "EF03MA05",
                 },
             ],
-            // Row 1: 08h20-09h10
             [
                 {
                     subject: "Matemática",
@@ -80,7 +76,6 @@ const planData = {
                     bncc: "EF03MA12",
                 },
             ],
-            // Row 2: 09h30-10h20
             [
                 {
                     subject: "Port.",
@@ -118,7 +113,6 @@ const planData = {
                     bncc: "EF03LP15",
                 },
             ],
-            // Row 3: 10h20-11h00
             [
                 {
                     subject: "Socioemoc.",
@@ -156,7 +150,6 @@ const planData = {
                     bncc: "EF15AR04",
                 },
             ],
-            // Row 4: 11h00-12h00
             [
                 {
                     subject: "Geo.",
@@ -198,8 +191,6 @@ const planData = {
     },
 };
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
-
 function renderCell(lesson) {
     const colorMap = {
         Matemática: "subj-mat",
@@ -224,7 +215,6 @@ function renderCell(lesson) {
   `;
 }
 
-// ── GENERATION FLOW ────────────────────────────────────────────────────────────
 
 let panelOpen = false;
 
@@ -236,7 +226,6 @@ function togglePanel() {
 }
 
 function handleSchoolChange(sel) {
-    // Visual feedback only
     const chip = document.getElementById("doc-status-chip");
     chip.innerHTML =
         '<i class="ti ti-building-school" style="font-size:14px"></i> Instituição alterada — recarregando modelos...';
@@ -324,7 +313,6 @@ function fillDocument() {
         cells.forEach((cell, colIdx) => {
             const lesson = data[rowIdx][colIdx];
 
-            // Show skeleton first
             cell.innerHTML = `
         <div class="typing-placeholder">
           <div class="skeleton-line" style="width:60%"></div>
@@ -333,7 +321,6 @@ function fillDocument() {
         </div>
       `;
 
-            // Then fill with real content with staggered delay
             const delay = (rowIdx * 5 + colIdx) * 90;
             setTimeout(() => {
                 cell.classList.add("ai-filled");
@@ -342,14 +329,12 @@ function fillDocument() {
         });
     });
 
-    // Update header info
     document.getElementById("info-disciplina").textContent =
         "Matemática / Multi";
     const now = new Date();
     document.getElementById("info-gen-time").textContent =
         `SIPE IA · ${now.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})}`;
 
-    // Update status chip
     setTimeout(() => {
         const chip = document.getElementById("doc-status-chip");
         chip.innerHTML =
@@ -360,11 +345,9 @@ function fillDocument() {
 }
 
 function openPanelAndUpdateQuality() {
-    // Open panel
     panelOpen = true;
     document.getElementById("side-panel").classList.add("open");
 
-    // Animate quality cards
     setTimeout(() => {
         document.getElementById("q-bncc").textContent = "92%";
         document.getElementById("q-content").textContent = "100%";
