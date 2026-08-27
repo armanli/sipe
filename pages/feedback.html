@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SIPE — Feedback da Coordenação</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+    <link rel="stylesheet" href="../styles/style.css">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satisfy&display=swap");
 
@@ -250,61 +251,6 @@
             font-size: 17px;
             color: var(--muted);
             margin-top: 4px;
-        }
-
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .kpi-card {
-            background: var(--white);
-            border: 2px solid var(--border);
-            border-radius: 14px;
-            padding: 20px 22px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.4s ease,
-            transform 0.4s ease,
-            box-shadow 0.2s;
-        }
-
-        .kpi-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .kpi-card:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .kpi-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            flex-shrink: 0;
-        }
-
-        .kpi-number {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .kpi-label {
-            font-size: 13px;
-            color: var(--muted);
-            font-weight: 600;
-            margin-top: 3px;
         }
 
         .main-layout {
@@ -764,33 +710,6 @@
             margin-top: 1px;
         }
 
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.6);
-            z-index: 100;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(3px);
-        }
-
-        .modal-overlay.open {
-            display: flex;
-        }
-
-        .modal {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 32px;
-            width: 700px;
-            max-width: 95vw;
-            max-height: 85vh;
-            overflow-y: auto;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.3s ease;
-        }
-
         @keyframes slideUp {
             from {
                 transform: translateY(20px);
@@ -800,39 +719,6 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-        }
-
-        .modal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 24px;
-        }
-
-        .modal-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #1e293b;
-        }
-
-        .modal-close {
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
-            background: #f1f5f9;
-            border: none;
-            cursor: pointer;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            transition: all 0.2s;
-        }
-
-        .modal-close:hover {
-            background: #fee2e2;
-            color: var(--alert-critical-text);
         }
 
         .coord-plan-item {
@@ -940,48 +826,6 @@
         .coord-view-sub {
             font-size: 12px;
             opacity: 0.7;
-        }
-
-        .toast-container {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 200;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .toast-msg {
-            background: #1e293b;
-            color: white;
-            padding: 14px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: fadeInRight 0.3s ease,
-            fadeOut 0.3s ease 2.7s forwards;
-            min-width: 280px;
-        }
-
-        .toast-msg i {
-            font-size: 20px;
-        }
-
-        .toast-success {
-            border-left: 4px solid #16a34a;
-        }
-
-        .toast-warning {
-            border-left: 4px solid var(--accent-orange);
-        }
-
-        .toast-info {
-            border-left: 4px solid var(--primary);
         }
 
         @keyframes fadeInRight {
@@ -1234,7 +1078,7 @@
                 <i class="ti ti-clipboard-list"></i>
                 <span>Avaliações</span>
             </a>
-            <a href="./biblioteca.html" class="menu-item">
+            <a href="library/library.html" class="menu-item">
                 <i class="ti ti-books"></i>
                 <span>Biblioteca</span>
             </a>
