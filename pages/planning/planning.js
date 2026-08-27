@@ -1,5 +1,5 @@
 const planData = {
-    Matemática: {
+    math: {
         subjectClass: "subj-mat",
         rows: [
             [
@@ -193,11 +193,11 @@ const planData = {
 
 function renderCell(lesson) {
     const colorMap = {
-        Matemática: "subj-mat",
+        math: "subj-mat",
         "Port.": "subj-por",
         "Geo.": "subj-geo",
         "Hist.": "subj-his",
-        Ciências: "subj-cie",
+        science: "subj-cie",
         "Socioemoc.": "subj-mat",
         Artes: "subj-his",
     };
@@ -225,7 +225,7 @@ function togglePanel() {
         .classList.toggle("open", panelOpen);
 }
 
-function handleSchoolChange(sel) {
+function handleSchoolChange() {
     const chip = document.getElementById("doc-status-chip");
     chip.innerHTML =
         '<i class="ti ti-building-school" style="font-size:14px"></i> Instituição alterada — recarregando modelos...';
@@ -306,7 +306,7 @@ function startGeneration() {
 
 function fillDocument() {
     const rows = document.querySelectorAll("#schedule-body tr");
-    const data = planData["Matemática"].rows;
+    const data = planData["math"].rows;
 
     rows.forEach((row, rowIdx) => {
         const cells = row.querySelectorAll("td.lesson-cell");
