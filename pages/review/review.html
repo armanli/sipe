@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SIPE — Gerador de Avaliações</title>
+
+    <link rel="stylesheet" href="./review.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+
+    <script defer src="./review.js"></script>
+</head>
+<body>
+<div class="app">
+    <div class="sidebar">
+        <div class="sidebar-logo"><i class="ti ti-cpu"></i> SIPE</div>
+        <div class="sidebar-menu">
+            <a href="../../index.html" class="menu-item">
+                <i class="ti ti-layout-dashboard"></i> Dashboard
+            </a>
+            <a href="../planning/planning.html" class="menu-item">
+                <i class="ti ti-file-text"></i> Planejamentos
+            </a>
+            <a href="./review.html" class="menu-item active">
+                <i class="ti ti-clipboard-list"></i> Avaliações
+            </a>
+            <a href="../biblioteca.html" class="menu-item">
+                <i class="ti ti-books"></i> Biblioteca
+            </a>
+            <a href="../feedback.html" class="menu-item">
+                <i class="ti ti-message-heart"></i> Feedback Coordenação
+            </a>
+        </div>
+        <div class="sidebar-footer">
+            <a href="#" class="menu-item" style="padding: 10px 14px">
+                <i class="ti ti-settings"></i> Configurações
+            </a>
+            <a href="#" class="menu-item" style="padding: 10px 14px">
+                <i class="ti ti-headset"></i> Suporte
+            </a>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <div class="header">
+            <div>
+                <label for="school-selector"></label>
+                <select id="school-selector" class="school-selector">
+                    <option>Colégio Cavlac</option>
+                    <option>Colégio Anglo</option>
+                </select>
+            </div>
+            <div class="header-right">
+                <div style="
+                font-size: 15px;
+                color: var(--muted);
+                font-weight: 600;
+                text-align: right;
+                line-height: 1.3;
+              ">
+                    <div style="font-weight: 800; color: #1e293b">Ano Letivo 2026</div>
+                    <div>2º Bimestre · 3º Ano A</div>
+                </div>
+                <div class="nav-icon-btn">
+                    <i class="ti ti-bell"></i>
+                    <div class="badge-orange">2</div>
+                </div>
+                <div class="user-profile-header">
+                    <div class="user-avatar">PE</div>
+                    <div>
+                        <div>Profª Elisabete</div>
+                        <div style="font-size: 13px; color: var(--muted); font-weight: 500">
+                            História · Geografia · Artes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-container">
+            <div>
+                <div class="page-title">Gerador de Avaliações</div>
+                <div class="page-subtitle">Crie avaliações alinhadas ao conteúdo efetivamente ministrado em sala.</div>
+            </div>
+
+            <div class="flow-timeline">
+                <div class="flow-step done">
+                    <div class="fs-icon"><i class="ti ti-circle-check"></i></div>
+                    <div>
+                        <div class="fs-label">Planejamento Aprovado</div>
+                        <div class="fs-sub">Semana 22 · 09–13/06</div>
+                    </div>
+                </div>
+                <div class="flow-step done">
+                    <div class="fs-icon"><i class="ti ti-circle-check"></i></div>
+                    <div>
+                        <div class="fs-label">Conteúdo Ministrado</div>
+                        <div class="fs-sub">12 conteúdos aplicados</div>
+                    </div>
+                </div>
+                <div class="flow-step active">
+                    <div class="fs-icon"><i class="ti ti-sparkles"></i></div>
+                    <div>
+                        <div class="fs-label">IA Gerando Avaliação</div>
+                        <div class="fs-sub">Baseada no que foi ensinado</div>
+                    </div>
+                </div>
+                <div class="flow-step pending">
+                    <div class="fs-icon"><i class="ti ti-send"></i></div>
+                    <div>
+                        <div class="fs-label">Envio para Aprovação</div>
+                        <div class="fs-sub">Coordenação pedagógica</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quality-bar">
+                <div class="q-card purple">
+                    <div class="q-icon">📊</div>
+                    <div class="q-val" id="qv-cob">—</div>
+                    <div class="q-label">Cobertura do Conteúdo</div>
+                </div>
+                <div class="q-card green">
+                    <div class="q-icon">📚</div>
+                    <div class="q-val" id="qv-cont">—</div>
+                    <div class="q-label">Conteúdos Utilizados</div>
+                </div>
+                <div class="q-card orange">
+                    <div class="q-icon">🎯</div>
+                    <div class="q-val" id="qv-bncc">—</div>
+                    <div class="q-label">Alinhamento BNCC</div>
+                </div>
+                <div class="q-card red">
+                    <div class="q-icon">⚠</div>
+                    <div class="q-val" id="qv-pend" style="color: #16a34a">—</div>
+                    <div class="q-label">Questões para Revisão</div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div style="display: flex; flex-direction: column; gap: 18px">
+                    <div class="card">
+                        <div class="card-title"><i class="ti ti-database"></i> Origem dos Conteúdos</div>
+                        <div class="origin-grid">
+                            <div class="origin-opt selected" onclick="selectOrigin(this)">
+                                <div class="opt-icon">📅</div>
+                                <div>
+                                    <div class="opt-label">Planejamento da Semana</div>
+                                    <div class="opt-desc">Conteúdos da semana 22 (09–13/06)</div>
+                                </div>
+                            </div>
+                            <div class="origin-opt" onclick="selectOrigin(this)">
+                                <div class="opt-icon">📆</div>
+                                <div>
+                                    <div class="opt-label">Planejamento do Mês</div>
+                                    <div class="opt-desc">Todo o conteúdo de junho/2026</div>
+                                </div>
+                            </div>
+                            <div class="origin-opt" onclick="selectOrigin(this)">
+                                <div class="opt-icon">🎓</div>
+                                <div>
+                                    <div class="opt-label">Conteúdo Ministrado</div>
+                                    <div class="opt-desc">Apenas o que foi aplicado em sala</div>
+                                </div>
+                            </div>
+                            <div class="origin-opt" onclick="selectOrigin(this)">
+                                <div class="opt-icon">✏️</div>
+                                <div>
+                                    <div class="opt-label">Seleção Manual</div>
+                                    <div class="opt-desc">Escolho os tópicos manualmente</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title"><i class="ti ti-adjustments-horizontal"></i> Configuração da Prova</div>
+                        <div style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 16px;
+                    margin-bottom: 16px;
+                  ">
+                            <div class="field-group">
+                                <label for="team-selector">Turma</label>
+                                <select id="team-selector">
+                                    <option>3º Ano A</option>
+                                    <option>3º Ano B</option>
+                                    <option>8º Ano</option>
+                                </select>
+                            </div>
+                            <div class="field-group">
+                                <label for="discipline-selector">Disciplina</label>
+                                <select id="discipline-selector">
+                                    <option>Matemática</option>
+                                    <option>Português</option>
+                                    <option>História</option>
+                                    <option>Ciências</option>
+                                </select>
+                            </div>
+                            <div class="field-group">
+                                <label for="two-month-period-selector">Bimestre</label>
+                                <select id="two-month-period-selector">
+                                    <option>2º Bimestre</option>
+                                    <option>1º Bimestre</option>
+                                    <option>3º Bimestre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 16px;
+                    margin-bottom: 16px;
+                  ">
+                            <div class="field-group">
+                                <label for="questions-input">Total de Questões</label>
+                                <input id="questions-input" type="number" value="10" min="5" max="20"/>
+                            </div>
+                            <div class="field-group">
+                                <label for="objectives-input">Objetivas</label>
+                                <input id="objectives-input" type="number" value="7" min="0" max="20"/>
+                            </div>
+                            <div class="field-group">
+                                <label for="essays">Dissertativas</label>
+                                <input id="essays" type="number" value="3" min="0" max="10"/>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label>Nível de Dificuldade</label>
+                            <div class="diff-row">
+                                <button class="diff-btn" onclick="selectDiff(this, 'easy')">😊 Fácil</button>
+                                <button class="diff-btn sel-med" onclick="selectDiff(this, 'med')">🧠 Médio</button>
+                                <button class="diff-btn" onclick="selectDiff(this, 'hard')">🔥 Difícil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="position: sticky; top: 0">
+                    <div class="card-title"><i class="ti ti-sparkles"></i> Fontes que a IA Consultará</div>
+
+                    <div class="source-item">
+                        <div class="source-icon" style="background: #eef2ff">📘</div>
+                        <div>
+                            <div class="src-name">Apostila Anglo — Matemática</div>
+                            <div class="src-detail">Módulo 4 · Páginas 140–145</div>
+                            <span class="src-badge badge-green">✓ Homologado</span>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-icon" style="background: #f0fdf4">📗</div>
+                        <div>
+                            <div class="src-name">Planejamento Semanal — Sem. 22</div>
+                            <div class="src-detail">Aprovado pela coordenação em 06/06</div>
+                            <span class="src-badge badge-purple">✓ Aprovado</span>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-icon" style="background: #fef9c3">📙</div>
+                        <div>
+                            <div class="src-name">Conteúdo Ministrado em Sala</div>
+                            <div class="src-detail">Registro de aulas: 09/06 a 13/06</div>
+                            <span class="src-badge badge-green">✓ Verificado</span>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-icon" style="background: #fff0f0">📕</div>
+                        <div>
+                            <div class="src-name">BNCC — Competências</div>
+                            <div class="src-detail">EF03MA05 · EF03MA07 · EF03MA12</div>
+                            <span class="src-badge badge-purple">✓ Alinhado</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-generate" onclick="startGeneration()">
+                        <i class="ti ti-sparkles"></i> Gerar Avaliação com IA
+                    </button>
+                </div>
+            </div>
+
+            <div id="doc-section" style="display: none">
+                <div class="doc-action-bar">
+                    <div style="display: flex; align-items: center; gap: 12px">
+                        <div class="doc-status-chip chip-ok" id="doc-chip">
+                            <i class="ti ti-circle-check" style="font-size: 14px"></i>
+                            Avaliação gerada pela IA — pronta para revisão
+                        </div>
+                    </div>
+                    <div class="doc-bar-right">
+                        <button class="btn-bar" onclick="openGabarito()">
+                            <i class="ti ti-eye" style="font-size: 16px"></i> Ver Gabarito
+                        </button>
+                        <button class="btn-bar">
+                            <i class="ti ti-printer" style="font-size: 16px"></i> Imprimir
+                        </button>
+                        <button class="btn-bar-primary" id="btn-approve">
+                            <i class="ti ti-send" style="font-size: 16px"></i> Enviar para
+                            Aprovação
+                        </button>
+                    </div>
+                </div>
+
+                <div class="institutional-doc">
+                    <div class="doc-header-stripe">
+                        <div class="doc-school-logo">CC</div>
+                        <div>
+                            <div class="doc-school-name">Colégio Cavlac</div>
+                            <div class="doc-school-sub">
+                                Avaliação Bimestral — Gerada pelo Sistema SIPE
+                            </div>
+                        </div>
+                        <div class="doc-meta-strip">
+                            <div class="doc-meta-pill">
+                                <span>Bimestre:</span> 2º Bimestre 2026
+                            </div>
+                            <div class="doc-meta-pill"><span>Data:</span> 13/06/2026</div>
+                            <div class="doc-meta-pill">
+                                <span>Doc n.º:</span> AVL-2026-0388
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doc-info-row">
+                        <div class="doc-info-cell">
+                            <div class="info-label">Professora</div>
+                            <div class="info-val">Elisabete Pereira</div>
+                        </div>
+                        <div class="doc-info-cell">
+                            <div class="info-label">Turma</div>
+                            <div class="info-val">3º Ano A</div>
+                        </div>
+                        <div class="doc-info-cell">
+                            <div class="info-label">Disciplina</div>
+                            <div class="info-val">Matemática</div>
+                        </div>
+                        <div class="doc-info-cell">
+                            <div class="info-label">Nota Total</div>
+                            <div class="info-val">10,0 pontos</div>
+                        </div>
+                        <div class="doc-info-cell">
+                            <div class="info-label">Origem</div>
+                            <div class="info-val" style="color: var(--primary); font-size: 13px">
+                                SIPE IA · Planej. Sem. 22
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doc-body" id="doc-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ai-overlay" id="ai-overlay">
+    <div class="ai-box">
+        <div class="ai-spinner"></div>
+        <div class="ai-title">⚡ IA Gerando Avaliação</div>
+        <div class="ai-step" id="ai-step">Iniciando análise do planejamento...</div>
+        <div class="ai-track">
+            <div class="ai-fill" id="ai-fill"></div>
+        </div>
+        <div class="scan-chips">
+            <div class="scan-chip" id="sc1">📅 Planejamento Sem. 22</div>
+            <div class="scan-chip" id="sc2">📘 Apostila Anglo</div>
+            <div class="scan-chip" id="sc3">📕 BNCC</div>
+            <div class="scan-chip" id="sc4">🎓 Conteúdo Ministrado</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-bg">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3><i class="ti ti-eye"></i> Gabarito Oficial — AVL-2026-0388</h3>
+            <button class="modal-close" onclick="closeModalBtn()">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div style="
+              background: #f0fdf4;
+              border: 1px solid #bbf7d0;
+              border-radius: 10px;
+              padding: 14px 18px;
+              font-size: 14px;
+              font-weight: 600;
+              color: #15803d;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 4px;
+            ">
+                <i class="ti ti-shield-check" style="font-size: 20px"></i>
+                Todas as questões foram geradas a partir de conteúdos homologados e
+                planejamentos aprovados pela coordenação.
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">1</div>
+                <div>
+                    <div class="gab-answer">Alternativa B — Real</div>
+                    <div class="gab-comment">
+                        O aluno deve identificar a moeda oficial do Brasil dentro do
+                        contexto do sistema monetário.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.142 · EF03MA05
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">2</div>
+                <div>
+                    <div class="gab-answer">Alternativa C — R$ 12,50</div>
+                    <div class="gab-comment">Resolução de situação-problema envolvendo adição de valores monetários com
+                        reagrupamento.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.143 · EF03MA07
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">3</div>
+                <div>
+                    <div class="gab-answer">Alternativa A — 4 × 3 = 12</div>
+                    <div class="gab-comment">Introdução ao conceito de multiplicação como adição repetida.</div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.5 · p.150 · EF03MA12
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">4</div>
+                <div>
+                    <div class="gab-answer">Alternativa B — 15</div>
+                    <div class="gab-comment">Aplicação da tabuada do 3: cálculo de 3 × 5 em contexto de
+                        situação-problema.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.5 · p.151 · EF03MA12
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">5</div>
+                <div>
+                    <div class="gab-answer">Alternativa D — Subtração</div>
+                    <div class="gab-comment">O aluno deve identificar a operação correta para resolver problemas de
+                        troco.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Livro PNLD · Cap.6 · p.90 · EF03MA07
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">6</div>
+                <div>
+                    <div class="gab-answer">Alternativa C — Quadrado</div>
+                    <div class="gab-comment">Reconhecimento de figuras planas com 4 lados iguais.</div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.6 · p.158 · EF03MA14
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">7</div>
+                <div>
+                    <div class="gab-answer">Alternativa A — 24</div>
+                    <div class="gab-comment">Aplicação da tabuada do 4 em contexto de agrupamento de objetos.</div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Planejamento Sem.22 · Tabuada · EF03MA12
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">8</div>
+                <div>
+                    <div class="gab-answer">Resposta dissertativa — ver critérios</div>
+                    <div class="gab-comment">
+                        O aluno deve descrever com as suas palavras a função do dinheiro na
+                        sociedade, citando pelo menos 2 exemplos de trocas comerciais.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.140 · EF03MA05
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">9</div>
+                <div>
+                    <div class="gab-answer">Resposta dissertativa — ver critérios</div>
+                    <div class="gab-comment">
+                        Resolução passo a passo de conta de adição com 3 parcelas. Aceitar tanto a forma horizontal
+                        quanto vertical, desde que o resultado (143) esteja correto.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Livro PNLD · Cap.6 · p.91 · EF03MA07
+                    </div>
+                </div>
+            </div>
+            <div class="gabarito-row">
+                <div class="gab-num">10</div>
+                <div>
+                    <div class="gab-answer">Resposta dissertativa — ver critérios</div>
+                    <div class="gab-comment">
+                        Produção de situação-problema de compra/venda com valores
+                        coerentes. Avaliar a coerência matemática e o uso correto do
+                        símbolo R$.
+                    </div>
+                    <div class="gab-origin">
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>Planejamento Sem.22 · Situação-problema ·
+                        EF03MA05
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <i class="ti ti-circle-check" style="font-size: 24px"></i>Avaliação gerada com rastreabilidade completa!
+</div>
+
+</body>
+</html>
