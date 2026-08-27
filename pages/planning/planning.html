@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 
     <script defer src="./planning.js"></script>
-
 </head>
 <body>
 <div class="app">
@@ -17,19 +16,35 @@
         <div class="sidebar-logo"><i class="ti ti-cpu"></i> SIPE</div>
         <div class="sidebar-menu">
             <a href="../../index.html" class="menu-item">
-                <i class="ti ti-layout-dashboard"></i> Dashboard</a>
+                <i class="ti ti-layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
             <a href="./planning.html" class="menu-item active">
-                <i class="ti ti-file-text"></i> Planejamentos</a>
+                <i class="ti ti-file-text"></i>
+                <span>Planejamentos</span>
+            </a>
             <a href="../review/review.html" class="menu-item">
-                <i class="ti ti-clipboard-list"></i> Avaliações</a>
+                <i class="ti ti-clipboard-list"></i>
+                <span>Avaliações</span>
+            </a>
             <a href="../biblioteca.html" class="menu-item">
-                <i class="ti ti-books"></i> Biblioteca</a>
+                <i class="ti ti-books"></i>
+                <span>Biblioteca</span>
+            </a>
             <a href="../feedback.html" class="menu-item">
-                <i class="ti ti-message-heart"></i> Feedback Coordenação</a>
+                <i class="ti ti-message-heart"></i>
+                <span>Feedback Coordenação</span>
+            </a>
         </div>
         <div class="sidebar-footer">
-            <a href="#" class="menu-item"><i class="ti ti-settings"></i> Configurações</a>
-            <a href="#" class="menu-item"><i class="ti ti-headset"></i> Suporte</a>
+            <a href="#" class="menu-item">
+                <i class="ti ti-settings"></i>
+                <span>Configurações</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ti ti-headset"></i>
+                <span>Suporte</span>
+            </a>
         </div>
     </div>
 
@@ -66,9 +81,7 @@
             <div class="page-header">
                 <div>
                     <div class="page-title">Planejamento Inteligente</div>
-                    <div class="page-subtitle">
-                        Geração automática baseada em conteúdos homologados pela
-                        instituição
+                    <div class="page-subtitle">Geração automática baseada em conteúdos homologados pela instituição
                     </div>
                 </div>
                 <div class="step-trail">
@@ -142,13 +155,15 @@
                         <div class="doc-action-bar-right">
                             <button class="btn-outline-white" onclick="togglePanel()">
                                 <i class="medium-icon ti ti-layout-sidebar-right"></i>
-                                Referências IA
+                                <span>Referências IA</span>
                             </button>
                             <button class="btn-outline-white">
-                                <i class="medium-icon ti ti-pencil"></i> Editar
+                                <i class="medium-icon ti ti-pencil"></i>
+                                <span>Editar</span>
                             </button>
                             <button class="btn-approve" id="btn-approve" disabled>
-                                <i class="medium-icon ti ti-send"></i> Enviar para Aprovação
+                                <i class="medium-icon ti ti-send"></i>
+                                <span>Enviar para Aprovação</span>
                             </button>
                         </div>
                     </div>
@@ -162,13 +177,16 @@
                             </div>
                             <div class="doc-meta-strip">
                                 <div class="doc-meta-pill">
-                                    <span>Bimestre:</span> 2º Bimestre 2026
+                                    <span>Bimestre:</span>
+                                    <span>2.º Bimestre 2026</span>
                                 </div>
                                 <div class="doc-meta-pill">
-                                    <span>Semana:</span> 09/06 a 13/06
+                                    <span>Semana:</span>
+                                    <span>09/06 a 13/06</span>
                                 </div>
                                 <div class="doc-meta-pill">
-                                    <span>Doc n.º:</span> PLN-2026-1147
+                                    <span>Doc n.º:</span>
+                                    <span>PLN-2026-1147</span>
                                 </div>
                             </div>
                         </div>
@@ -192,9 +210,7 @@
                             </div>
                             <div class="doc-info-cell">
                                 <div class="info-label">Gerado por IA</div>
-                                <div class="info-val" id="info-gen-time">
-                                    —
-                                </div>
+                                <div class="info-val" id="info-gen-time">—</div>
                             </div>
                         </div>
 
@@ -242,113 +258,73 @@
                                 <tr>
                                     <td class="time-cell">08h20<br/>—<br/>09h10</td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="time-cell">09h30<br/>—<br/>10h20</td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="time-cell">10h20<br/>—<br/>11h00</td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="time-cell">11h00<br/>—<br/>12h00</td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                     <td class="lesson-cell">
-                                        <div class="cell-empty">
-                                            <i class="ti ti-dots"></i>
-                                        </div>
+                                        <div class="cell-empty"><i class="ti ti-dots"></i></div>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -459,6 +435,5 @@
     <i class="large-icon ti ti-circle-check"></i>
     Planejamento gerado com sucesso! Pronto para revisão.
 </div>
-
 </body>
 </html>

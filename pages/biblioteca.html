@@ -4,10 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SIPE — Biblioteca Inteligente de Conteúdos</title>
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satisfy&display=swap");
 
@@ -1415,29 +1412,36 @@
     <div class="sidebar">
         <div class="sidebar-logo"><i class="ti ti-cpu"></i> SIPE</div>
         <div class="sidebar-menu">
-            <a href="../index.html" class="menu-item"
-            ><i class="ti ti-layout-dashboard"></i> Dashboard</a
-            >
-            <a href="../pages/planning/planning.html" class="menu-item"
-            ><i class="ti ti-file-text"></i> Planejamentos</a
-            >
-            <a href="../pages/review/review.html" class="menu-item"
-            ><i class="ti ti-clipboard-list"></i> Avaliações</a
-            >
-            <a href="./biblioteca.html" class="menu-item active"
-            ><i class="ti ti-books"></i> Biblioteca</a
-            >
-            <a href="./feedback.html" class="menu-item"
-            ><i class="ti ti-message-heart"></i> Feedback Coordenação</a
-            >
+            <a href="../index.html" class="menu-item">
+                <i class="ti ti-layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="../pages/planning/planning.html" class="menu-item">
+                <i class="ti ti-file-text"></i>
+                <span>Planejamentos</span>
+            </a>
+            <a href="../pages/review/review.html" class="menu-item">
+                <i class="ti ti-clipboard-list"></i>
+                <span>Avaliações</span>
+            </a>
+            <a href="./biblioteca.html" class="menu-item active">
+                <i class="ti ti-books"></i>
+                <span>Biblioteca</span>
+            </a>
+            <a href="./feedback.html" class="menu-item">
+                <i class="ti ti-message-heart"></i>
+                <span>Feedback Coordenação</span>
+            </a>
         </div>
         <div class="sidebar-footer">
-            <a href="#" class="menu-item" style="padding: 10px 14px"
-            ><i class="ti ti-settings"></i> Configurações</a
-            >
-            <a href="#" class="menu-item" style="padding: 10px 14px"
-            ><i class="ti ti-headset"></i> Suporte</a
-            >
+            <a href="#" class="menu-item" style="padding: 10px 14px">
+                <i class="ti ti-settings"></i>
+                <span>Configurações</span>
+            </a>
+            <a href="#" class="menu-item" style="padding: 10px 14px">
+                <i class="ti ti-headset"></i>
+                <span>Suporte</span>
+            </a>
         </div>
     </div>
 
@@ -1450,29 +1454,26 @@
                     <option>Colégio Anglo</option>
                 </select>
                 <div class="system-chip">
-                    <i class="ti ti-school"></i> Sistema Anglo
+                    <i class="ti ti-school"></i>
+                    <span>Sistema Anglo</span>
                 </div>
-                <div
-                        class="system-chip"
-                        style="
+                <div class="system-chip" style="
                 background: linear-gradient(135deg, #f0fdf4, #dcfce7);
                 border-color: #86efac;
                 color: #15803d;
-              "
-                >
-                    <i class="ti ti-calendar-check"></i> 2026
+              ">
+                    <i class="ti ti-calendar-check"></i>
+                    <span>2026</span>
                 </div>
             </div>
             <div class="header-right">
-                <div
-                        class="nav-icon-btn"
-                        onclick="showToast('4 novas notificações', 'info', 'ti-bell')"
-                >
+                <div class="nav-icon-btn" onclick="showToast('4 novas notificações', 'info', 'ti-bell')">
                     <i class="ti ti-bell"></i>
                     <div class="badge-orange">4</div>
                 </div>
                 <button class="btn-admin" onclick="openAdminModal()">
-                    <i class="ti ti-settings-2"></i> Gestão de Conteúdos
+                    <i class="ti ti-settings-2"></i>
+                    <span>Gestão de Conteúdos</span>
                 </button>
                 <div class="user-profile-header">
                     <div class="user-avatar">PE</div>
@@ -1485,18 +1486,13 @@
             <div class="page-content" id="pageContent">
                 <div>
                     <div class="page-title">Biblioteca Inteligente</div>
-                    <div class="page-subtitle">
-                        Base oficial utilizada pela IA para gerar planejamentos e
-                        avaliações.
+                    <div class="page-subtitle">Base oficial utilizada pela IA para gerar planejamentos e avaliações.
                     </div>
                 </div>
 
                 <div class="kpi-grid">
                     <div class="kpi-card" id="kpi1">
-                        <div
-                                class="kpi-icon"
-                                style="background: #ede9fe; color: #6d28d9"
-                        >
+                        <div class="kpi-icon" style="background: #ede9fe; color: #6d28d9">
                             <i class="ti ti-books"></i>
                         </div>
                         <div>
@@ -1505,10 +1501,7 @@
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi2">
-                        <div
-                                class="kpi-icon"
-                                style="background: #dcfce7; color: #15803d"
-                        >
+                        <div class="kpi-icon" style="background: #dcfce7; color: #15803d">
                             <i class="ti ti-school"></i>
                         </div>
                         <div>
@@ -1517,10 +1510,7 @@
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi3">
-                        <div
-                                class="kpi-icon"
-                                style="background: #fef9c3; color: #a16207"
-                        >
+                        <div class="kpi-icon" style="background: #fef9c3; color: #a16207">
                             <i class="ti ti-cpu"></i>
                         </div>
                         <div>
@@ -1529,10 +1519,7 @@
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi4">
-                        <div
-                                class="kpi-icon"
-                                style="background: #fff7ed; color: #c2410c"
-                        >
+                        <div class="kpi-icon" style="background: #fff7ed; color: #c2410c">
                             <i class="ti ti-file-certificate"></i>
                         </div>
                         <div>
@@ -1578,24 +1565,16 @@
                     <div class="search-box">
                         <i class="ti ti-search"></i>
                         <label for="searchInput"></label>
-                        <input
-                                type="text"
-                                placeholder="Buscar materiais, competências, conteúdos..."
-                                id="searchInput"
-                                oninput="filterMaterials()"
-                        />
+                        <input type="text"
+                               placeholder="Buscar materiais, competências, conteúdos..."
+                               id="searchInput"
+                               oninput="filterMaterials()"/>
                     </div>
                     <div class="filter-divider"></div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">
-                            Sistema
-                        </div>
+                        <div class="filter-label" style="margin-bottom: 4px">Sistema</div>
                         <label for="filterSistema"></label>
-                        <select
-                                class="filter-select"
-                                id="filterSistema"
-                                onchange="filterMaterials()"
-                        >
+                        <select class="filter-select" id="filterSistema" onchange="filterMaterials()">
                             <option value="">Todos</option>
                             <option value="anglo">Anglo</option>
                             <option value="objetivo">Objetivo</option>
@@ -1606,11 +1585,7 @@
                     <div>
                         <div class="filter-label" style="margin-bottom: 4px">Série</div>
                         <label for="filterSerie"></label>
-                        <select
-                                class="filter-select"
-                                id="filterSerie"
-                                onchange="filterMaterials()"
-                        >
+                        <select class="filter-select" id="filterSerie" onchange="filterMaterials()">
                             <option value="">Todas</option>
                             <option value="3ano">3º Ano</option>
                             <option value="7ano">7º Ano</option>
@@ -1619,15 +1594,11 @@
                         </select>
                     </div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">
-                            Disciplina
-                        </div>
+                        <div class="filter-label" style="margin-bottom: 4px">Disciplina</div>
                         <label for="filterDisc"></label>
-                        <select
-                                class="filter-select"
+                        <select class="filter-select"
                                 id="filterDisc"
-                                onchange="filterMaterials()"
-                        >
+                                onchange="filterMaterials()">
                             <option value="">Todas</option>
                             <option value="mat">Matemática</option>
                             <option value="hist">História</option>
@@ -1637,15 +1608,11 @@
                         </select>
                     </div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">
-                            Bimestre
-                        </div>
+                        <div class="filter-label" style="margin-bottom: 4px">Bimestre</div>
                         <label for="filterBim"></label>
-                        <select
-                                class="filter-select"
+                        <select class="filter-select"
                                 id="filterBim"
-                                onchange="filterMaterials()"
-                        >
+                                onchange="filterMaterials()">
                             <option value="">Todos</option>
                             <option value="1">1º</option>
                             <option value="2">2º</option>
@@ -1655,20 +1622,16 @@
                     </div>
                     <div class="filter-divider"></div>
                     <div class="view-toggle">
-                        <button
-                                class="view-btn active"
+                        <button class="view-btn active"
                                 id="btnGrid"
                                 onclick="setView('grid')"
-                                title="Grade"
-                        >
+                                title="Grade">
                             <i class="ti ti-layout-grid"></i>
                         </button>
-                        <button
-                                class="view-btn"
+                        <button class="view-btn"
                                 id="btnList"
                                 onclick="setView('list')"
-                                title="Lista"
-                        >
+                                title="Lista">
                             <i class="ti ti-layout-list"></i>
                         </button>
                     </div>
@@ -1692,9 +1655,7 @@
                             <div class="panel-mat-title" id="panelTitle">—</div>
                             <div class="panel-mat-sub" id="panelSub">—</div>
                         </div>
-                        <button class="panel-close" onclick="closePanel()">
-                            <i class="ti ti-x"></i>
-                        </button>
+                        <button class="panel-close" onclick="closePanel()"><i class="ti ti-x"></i></button>
                     </div>
                     <div class="panel-body" id="panelBody"></div>
                 </div>
@@ -1708,29 +1669,23 @@
         <div class="modal-header">
             <div>
                 <div class="modal-title">⚙ Gestão de Conteúdos</div>
-                <div style="font-size: 12px; color: var(--muted); margin-top: 3px">
-                    Administração da base de conhecimento institucional
+                <div style="font-size: 12px; color: var(--muted); margin-top: 3px">Administração da base de conhecimento
+                    institucional
                 </div>
             </div>
-            <button class="modal-close" onclick="closeAdminModal()">
-                <i class="ti ti-x"></i>
-            </button>
+            <button class="modal-close" onclick="closeAdminModal()"><i class="ti ti-x"></i></button>
         </div>
         <div class="permissions-banner">
             <i class="ti ti-shield-lock"></i>
             <div>
                 <strong>Acesso Restrito — Administrador e Coordenação</strong>
-                <span
-                >Professores possuem acesso somente leitura. ‘Upload’ e
-              gerenciamento são exclusivos da gestão.</span
-                >
+                <span>Professores possuem acesso somente leitura. ‘Upload’ e gerenciamento são exclusivos da gestão.</span>
             </div>
         </div>
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-books" style="color: var(--primary)"></i> Apostilas
-                e Livros Didáticos
+                <i class="ti ti-books" style="color: var(--primary)"></i> Apostilas e Livros Didáticos
             </div>
             <div class="upload-grid">
                 <div class="upload-item uploaded" onclick="simulateUpload(this)">
@@ -1770,8 +1725,8 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-heart" style="color: #c2410c"></i> Livros
-                Socioemocionais
+                <i class="ti ti-heart" style="color: #c2410c"></i>
+                <span>Livros Socioemocionais</span>
             </div>
             <div class="upload-grid">
                 <div class="upload-item uploaded" onclick="simulateUpload(this)">
@@ -1795,8 +1750,8 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-certificate" style="color: #b91c1c"></i> BNCC e
-                Documentos Oficiais
+                <i class="ti ti-certificate" style="color: #b91c1c"></i>
+                <span>BNCC e Documentos Oficiais</span>
             </div>
             <div class="upload-grid">
                 <div class="upload-item uploaded" onclick="simulateUpload(this)">
@@ -1820,8 +1775,8 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-clipboard-list" style="color: #0369a1"></i> Modelos
-                de Avaliação e Planejamento
+                <i class="ti ti-clipboard-list" style="color: #0369a1"></i>
+                <span>Modelos de Avaliação e Planejamento</span>
             </div>
             <div class="upload-grid">
                 <div class="upload-item uploaded" onclick="simulateUpload(this)">
@@ -1843,22 +1798,18 @@
             </div>
         </div>
 
-        <div
-                style="
-            background: #f5f3ff;
+        <div style="background: #f5f3ff;
             border: 1px solid #c4b5fd;
             border-radius: 10px;
             padding: 14px 16px;
             font-size: 12px;
             color: #4c1d95;
             margin-top: 4px;
-          "
-        >
-            <strong>🤖 Indexação Automática:</strong> Após o ‘upload’, o SIPE
-            processa, indexa e disponibiliza o conteúdo para a IA em até
-            <strong>2 minutos</strong>. Todo material indexado fica rastreável — o
-            sistema registra quais documentos geraram cada planejamento ou
-            avaliação.
+          ">
+            <strong>🤖 Indexação Automática:</strong>
+            <span>Após o ‘upload’, o SIPE processa, indexa e disponibiliza o conteúdo para a IA em até</span>
+            <strong>2 minutos.</strong>
+            <span>Todo material indexado fica rastreável — o sistema registra quais documentos geraram cada planejamento ou avaliação.</span>
         </div>
     </div>
 </div>
@@ -2546,8 +2497,7 @@
     function closePanel() {
         document.getElementById("detailPanel").classList.remove("open");
         selectedId = null;
-        document
-            .querySelectorAll(".mat-card")
+        document.querySelectorAll(".mat-card")
             .forEach((c) => c.classList.remove("selected"));
     }
 
@@ -2564,12 +2514,9 @@
             suggestionsGenerated[id] = true;
             if (results) {
                 results.innerHTML = m.aiSuggestions
-                    .map(
-                        (s) => `
-          <div class="panel-ai-result"><i class="ti ${s.icon}"></i><span>${s.text}</span></div>
-        `,
-                    )
-                    .join("");
+                    .map((s) => `
+                      <div class="panel-ai-result"><i class="ti ${s.icon}"></i><span>${s.text}</span></div>
+                    `,).join("");
                 results.classList.add("visible");
             }
             const aiBox = document.querySelector(".panel-ai-box");
@@ -2585,8 +2532,7 @@
     function openAdminModal() {
         document.getElementById("adminModal").classList.add("open");
         setTimeout(() => {
-            document
-                .querySelectorAll(".upload-item.uploaded .upload-progress-fill")
+            document.querySelectorAll(".upload-item.uploaded .upload-progress-fill")
                 .forEach((el) => {
                     el.style.width = "100%";
                 });
@@ -2597,8 +2543,7 @@
         document.getElementById("adminModal").classList.remove("open");
     }
 
-    document
-        .getElementById("adminModal")
+    document.getElementById("adminModal")
         .addEventListener("click", function (e) {
             if (e.target === this) closeAdminModal();
         });
@@ -2614,8 +2559,7 @@
         }
         item.classList.add("uploaded");
         item.querySelector("i").className = "ti ti-cloud-check";
-        item.querySelector(".upload-item-name").textContent =
-            item.querySelector(".upload-item-name").textContent;
+        item.querySelector(".upload-item-name").textContent = item.querySelector(".upload-item-name").textContent;
         item.querySelector(".upload-item-desc").textContent = "Indexando...";
         const bar = item.querySelector(".upload-progress-fill");
         setTimeout(() => {

@@ -14,30 +14,40 @@
 <body>
 <div class="app">
     <div class="sidebar">
-        <div class="sidebar-logo"><i class="ti ti-cpu"></i> SIPE</div>
+        <div class="sidebar-logo">
+            <i class="ti ti-cpu"></i>
+            <span>SIPE</span>
+        </div>
         <div class="sidebar-menu">
             <a href="../../index.html" class="menu-item">
-                <i class="ti ti-layout-dashboard"></i> Dashboard
+                <i class="ti ti-layout-dashboard"></i>
+                <span>Dashboard</span>
             </a>
             <a href="../planning/planning.html" class="menu-item">
-                <i class="ti ti-file-text"></i> Planejamentos
+                <i class="ti ti-file-text"></i>
+                <span>Planejamentos</span>
             </a>
             <a href="./review.html" class="menu-item active">
-                <i class="ti ti-clipboard-list"></i> Avaliações
+                <i class="ti ti-clipboard-list"></i>
+                <span>Avaliações</span>
             </a>
             <a href="../biblioteca.html" class="menu-item">
-                <i class="ti ti-books"></i> Biblioteca
+                <i class="ti ti-books"></i>
+                <span>Biblioteca</span>
             </a>
             <a href="../feedback.html" class="menu-item">
-                <i class="ti ti-message-heart"></i> Feedback Coordenação
+                <i class="ti ti-message-heart"></i>
+                <span>Feedback Coordenação</span>
             </a>
         </div>
         <div class="sidebar-footer">
             <a href="#" class="menu-item" style="padding: 10px 14px">
-                <i class="ti ti-settings"></i> Configurações
+                <i class="ti ti-settings"></i>
+                <span>Configurações</span>
             </a>
             <a href="#" class="menu-item" style="padding: 10px 14px">
-                <i class="ti ti-headset"></i> Suporte
+                <i class="ti ti-headset"></i>
+                <span>Suporte</span>
             </a>
         </div>
     </div>
@@ -141,7 +151,10 @@
             <div class="two-col">
                 <div style="display: flex; flex-direction: column; gap: 18px">
                     <div class="card">
-                        <div class="card-title"><i class="ti ti-database"></i> Origem dos Conteúdos</div>
+                        <div class="card-title">
+                            <i class="ti ti-database"></i>
+                            <span>Origem dos Conteúdos</span>
+                        </div>
                         <div class="origin-grid">
                             <div class="origin-opt selected" onclick="selectOrigin(this)">
                                 <div class="opt-icon">📅</div>
@@ -175,7 +188,10 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-title"><i class="ti ti-adjustments-horizontal"></i> Configuração da Prova</div>
+                        <div class="card-title">
+                            <i class="ti ti-adjustments-horizontal"></i>
+                            <span>Configuração da Prova</span>
+                        </div>
                         <div style="
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
@@ -239,7 +255,10 @@
                 </div>
 
                 <div class="card" style="position: sticky; top: 0">
-                    <div class="card-title"><i class="ti ti-sparkles"></i> Fontes que a IA Consultará</div>
+                    <div class="card-title">
+                        <i class="ti ti-sparkles"></i>
+                        <span>Fontes que a IA Consultará</span>
+                    </div>
 
                     <div class="source-item">
                         <div class="source-icon" style="background: #eef2ff">📘</div>
@@ -275,7 +294,8 @@
                     </div>
 
                     <button class="btn-generate" onclick="startGeneration()">
-                        <i class="ti ti-sparkles"></i> Gerar Avaliação com IA
+                        <i class="ti ti-sparkles"></i>
+                        <span>Gerar Avaliação com IA</span>
                     </button>
                 </div>
             </div>
@@ -285,19 +305,21 @@
                     <div style="display: flex; align-items: center; gap: 12px">
                         <div class="doc-status-chip chip-ok" id="doc-chip">
                             <i class="ti ti-circle-check" style="font-size: 14px"></i>
-                            Avaliação gerada pela IA — pronta para revisão
+                            <span>Avaliação gerada pela IA — pronta para revisão</span>
                         </div>
                     </div>
                     <div class="doc-bar-right">
                         <button class="btn-bar" onclick="openGabarito()">
-                            <i class="ti ti-eye" style="font-size: 16px"></i> Ver Gabarito
+                            <i class="ti ti-eye" style="font-size: 16px"></i>
+                            <span>Ver Gabarito</span>
                         </button>
                         <button class="btn-bar">
-                            <i class="ti ti-printer" style="font-size: 16px"></i> Imprimir
+                            <i class="ti ti-printer" style="font-size: 16px"></i>
+                            <span>Imprimir</span>
                         </button>
                         <button class="btn-bar-primary" id="btn-approve">
-                            <i class="ti ti-send" style="font-size: 16px"></i> Enviar para
-                            Aprovação
+                            <i class="ti ti-send" style="font-size: 16px"></i>
+                            <span>Enviar para Aprovação</span>
                         </button>
                     </div>
                 </div>
@@ -307,17 +329,20 @@
                         <div class="doc-school-logo">CC</div>
                         <div>
                             <div class="doc-school-name">Colégio Cavlac</div>
-                            <div class="doc-school-sub">
-                                Avaliação Bimestral — Gerada pelo Sistema SIPE
-                            </div>
+                            <div class="doc-school-sub">Avaliação Bimestral — Gerada pelo Sistema SIPE</div>
                         </div>
                         <div class="doc-meta-strip">
                             <div class="doc-meta-pill">
-                                <span>Bimestre:</span> 2º Bimestre 2026
+                                <span>Bimestre:</span>
+                                <span>2.º Bimestre 2026</span>
                             </div>
-                            <div class="doc-meta-pill"><span>Data:</span> 13/06/2026</div>
                             <div class="doc-meta-pill">
-                                <span>Doc n.º:</span> AVL-2026-0388
+                                <span>Data:</span>
+                                <span>13/06/2026</span>
+                            </div>
+                            <div class="doc-meta-pill">
+                                <span>Doc n.º:</span>
+                                <span>AVL-2026-0388</span>
                             </div>
                         </div>
                     </div>
@@ -374,7 +399,10 @@
 <div class="modal-bg" id="modal-bg">
     <div class="modal-box">
         <div class="modal-header">
-            <h3><i class="ti ti-eye"></i> Gabarito Oficial — AVL-2026-0388</h3>
+            <h3>
+                <i class="ti ti-eye"></i>
+                <span>Gabarito Oficial — AVL-2026-0388</span>
+            </h3>
             <button class="modal-close" onclick="closeModalBtn()">
                 <i class="ti ti-x"></i>
             </button>
@@ -394,19 +422,19 @@
               margin-bottom: 4px;
             ">
                 <i class="ti ti-shield-check" style="font-size: 20px"></i>
-                Todas as questões foram geradas a partir de conteúdos homologados e
-                planejamentos aprovados pela coordenação.
+                <span>Todas as questões foram geradas a partir de conteúdos homologados e planejamentos aprovados pela
+                    coordenação.</span>
             </div>
             <div class="gabarito-row">
                 <div class="gab-num">1</div>
                 <div>
                     <div class="gab-answer">Alternativa B — Real</div>
-                    <div class="gab-comment">
-                        O aluno deve identificar a moeda oficial do Brasil dentro do
-                        contexto do sistema monetário.
+                    <div class="gab-comment"> O aluno deve identificar a moeda oficial do Brasil dentro do contexto do
+                        sistema monetário.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.142 · EF03MA05
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.4 · p.142 · EF03MA05</span>
                     </div>
                 </div>
             </div>
@@ -418,7 +446,8 @@
                         reagrupamento.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.143 · EF03MA07
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.4 · p.143 · EF03MA07</span>
                     </div>
                 </div>
             </div>
@@ -428,7 +457,8 @@
                     <div class="gab-answer">Alternativa A — 4 × 3 = 12</div>
                     <div class="gab-comment">Introdução ao conceito de multiplicação como adição repetida.</div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.5 · p.150 · EF03MA12
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.5 · p.150 · EF03MA12</span>
                     </div>
                 </div>
             </div>
@@ -440,7 +470,8 @@
                         situação-problema.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.5 · p.151 · EF03MA12
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.5 · p.151 · EF03MA12</span>
                     </div>
                 </div>
             </div>
@@ -452,7 +483,8 @@
                         troco.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Livro PNLD · Cap.6 · p.90 · EF03MA07
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Livro PNLD · Cap.6 · p.90 · EF03MA07</span>
                     </div>
                 </div>
             </div>
@@ -462,7 +494,8 @@
                     <div class="gab-answer">Alternativa C — Quadrado</div>
                     <div class="gab-comment">Reconhecimento de figuras planas com 4 lados iguais.</div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.6 · p.158 · EF03MA14
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.6 · p.158 · EF03MA14</span>
                     </div>
                 </div>
             </div>
@@ -472,7 +505,8 @@
                     <div class="gab-answer">Alternativa A — 24</div>
                     <div class="gab-comment">Aplicação da tabuada do 4 em contexto de agrupamento de objetos.</div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Planejamento Sem.22 · Tabuada · EF03MA12
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Planejamento Sem.22 · Tabuada · EF03MA12</span>
                     </div>
                 </div>
             </div>
@@ -480,12 +514,12 @@
                 <div class="gab-num">8</div>
                 <div>
                     <div class="gab-answer">Resposta dissertativa — ver critérios</div>
-                    <div class="gab-comment">
-                        O aluno deve descrever com as suas palavras a função do dinheiro na
+                    <div class="gab-comment"> O aluno deve descrever com as suas palavras a função do dinheiro na
                         sociedade, citando pelo menos 2 exemplos de trocas comerciais.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Apostila Anglo · Mod.4 · p.140 · EF03MA05
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Apostila Anglo · Mod.4 · p.140 · EF03MA05</span>
                     </div>
                 </div>
             </div>
@@ -493,12 +527,12 @@
                 <div class="gab-num">9</div>
                 <div>
                     <div class="gab-answer">Resposta dissertativa — ver critérios</div>
-                    <div class="gab-comment">
-                        Resolução passo a passo de conta de adição com 3 parcelas. Aceitar tanto a forma horizontal
-                        quanto vertical, desde que o resultado (143) esteja correto.
+                    <div class="gab-comment">Resolução passo a passo de conta de adição com 3 parcelas. Aceitar tanto a
+                        forma horizontal quanto vertical, desde que o resultado (143) esteja correto.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Livro PNLD · Cap.6 · p.91 · EF03MA07
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Livro PNLD · Cap.6 · p.91 · EF03MA07</span>
                     </div>
                 </div>
             </div>
@@ -506,14 +540,12 @@
                 <div class="gab-num">10</div>
                 <div>
                     <div class="gab-answer">Resposta dissertativa — ver critérios</div>
-                    <div class="gab-comment">
-                        Produção de situação-problema de compra/venda com valores
-                        coerentes. Avaliar a coerência matemática e o uso correto do
-                        símbolo R$.
+                    <div class="gab-comment">Produção de situação-problema de compra/venda com valores coerentes.
+                        Avaliar a coerência matemática e o uso correto do símbolo R$.
                     </div>
                     <div class="gab-origin">
-                        <i class="ti ti-book-2" style="font-size: 13px"></i>Planejamento Sem.22 · Situação-problema ·
-                        EF03MA05
+                        <i class="ti ti-book-2" style="font-size: 13px"></i>
+                        <span>Planejamento Sem.22 · Situação-problema · EF03MA05</span>
                     </div>
                 </div>
             </div>
@@ -522,7 +554,8 @@
 </div>
 
 <div class="toast" id="toast">
-    <i class="ti ti-circle-check" style="font-size: 24px"></i>Avaliação gerada com rastreabilidade completa!
+    <i class="ti ti-circle-check" style="font-size: 24px"></i>
+    <span>Avaliação gerada com rastreabilidade completa!</span>
 </div>
 
 </body>
