@@ -24,6 +24,16 @@
     --light-yellow: #e1ce89;
     --light-red: #e48383;
 
+    --status-approved-bg: #dcfce7;
+    --status-approved-text: #15803d;
+    --status-approved-border: #86efac;
+    --status-pending-bg: #fef9c3;
+    --status-pending-text: #a16207;
+    --status-pending-border: #fde047;
+    --status-rejected-bg: #fee2e2;
+    --status-rejected-text: #b91c1c;
+    --status-rejected-border: #fca5a5;
+
     --navy-blue: #0f172a;
     --muted: #334155;
     --cotton: #cbd5e1;
