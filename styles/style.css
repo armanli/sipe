@@ -837,7 +837,7 @@ body {
 
 .modal-close:hover {
     background: #fee2e2;
-    color: var(--alert-critical-text);
+    color: var(--alert);
 }
 
 .toast-container {
@@ -875,11 +875,11 @@ body {
 }
 
 .toast-info {
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid var(--purple);
 }
 
 .toast-warning {
-    border-left: 4px solid var(--accent-orange);
+    border-left: 4px solid var(--orange);
 }
 
 
@@ -952,7 +952,7 @@ body {
 
 .kpi-card {
     background: var(--white);
-    border: 2px solid var(--border);
+    border: 2px solid var(--cotton);
     border-radius: 14px;
     padding: 18px 20px;
     display: flex;

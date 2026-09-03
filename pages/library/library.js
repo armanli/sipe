@@ -650,7 +650,7 @@ function openPanel(id, autoSuggest) {
             : ""
     }
         </div>
-        <div id="panelAiLoading" style="display:none;align-items:center;gap:8px;padding:8px 0;font-size:12px;color:var(--primary)">
+        <div id="panelAiLoading" style="display:none;align-items:center;gap:8px;padding:8px 0;font-size:12px;color:var(--purple)">
           <span class="ai-spinner visible"></span> Analisando conteúdo indexado...
         </div>
         ${

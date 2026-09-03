@@ -463,7 +463,6 @@
 }
 
 
-
 .coord-plan-item {
     background: #f8fafc;
     border: 2px solid var(--cotton);
@@ -570,7 +569,6 @@
     font-size: 12px;
     opacity: 0.7;
 }
-
 
 
 .revision-item {
@@ -709,8 +707,6 @@
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
-
-
 
 .coord-view-trigger {
     display: flex;

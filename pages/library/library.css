@@ -8,7 +8,7 @@
     border-radius: 8px;
     font-size: 13px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--purple);
 }
 
 .system-chip i {
@@ -39,7 +39,7 @@
 
 .btn-admin i {
     font-size: 18px;
-    color: var(--accent-orange);
+    color: var(--orange);
 }
 
 .ai-flow-banner {
@@ -102,7 +102,7 @@
 
 .filters-bar {
     background: var(--white);
-    border: 2px solid var(--border);
+    border: 2px solid var(--cotton);
     border-radius: 14px;
     padding: 16px 20px;
     display: flex;
@@ -116,7 +116,7 @@
     align-items: center;
     gap: 10px;
     background: #f8fafc;
-    border: 2px solid var(--border);
+    border: 2px solid var(--cotton);
     border-radius: 10px;
     padding: 9px 14px;
     flex: 1;
@@ -125,7 +125,7 @@
 }
 
 .search-box:focus-within {
-    border-color: var(--primary);
+    border-color: var(--purple);
 }
 
 .search-box i {
@@ -149,7 +149,7 @@
     font-size: 13px;
     font-weight: 700;
     color: #1e293b;
-    border: 2px solid var(--border);
+    border: 2px solid var(--purple);
     border-radius: 10px;
     padding: 9px 32px 9px 12px;
     cursor: pointer;
@@ -160,7 +160,7 @@
 }
 
 .filter-select:focus {
-    border-color: var(--primary);
+    border-color: var(--purple);
 }
 
 .filter-label {
@@ -175,7 +175,7 @@
 .filter-divider {
     width: 1px;
     height: 32px;
-    background: var(--border);
+    background: var(--cotton);
     flex-shrink: 0;
 }
 
@@ -189,7 +189,7 @@
     height: 36px;
     border-radius: 8px;
     background: #f8fafc;
-    border: 2px solid var(--border);
+    border: 2px solid var(--cotton);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,8 +200,8 @@
 }
 
 .view-btn.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--purple);
+    border-color: var(--purple);
     color: white;
 }
 
@@ -217,7 +217,7 @@
 
 .mat-card {
     background: var(--white);
-    border: 2px solid var(--border);
+    border: 2px solid var(--cotton);
     border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
@@ -227,13 +227,13 @@
 }
 
 .mat-card:hover {
-    border-color: var(--primary);
+    border-color: var(--purple);
     transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.12);
 }
 
 .mat-card.selected {
-    border-color: var(--primary);
+    border-color: var(--purple);
     box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.15),
     0 12px 28px rgba(109, 40, 217, 0.12);
 }
@@ -417,8 +417,8 @@
 }
 
 .mat-btn-view:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: var(--purple);
+    color: var(--purple);
 }
 
 .mat-btn-ai {
@@ -459,7 +459,7 @@
 
 .mat-usage-stat i {
     font-size: 14px;
-    color: var(--primary);
+    color: var(--purple);
 }
 
 .detail-panel {
@@ -468,7 +468,7 @@
     overflow: hidden;
     transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--white);
-    border-left: 2px solid var(--border);
+    border-left: 2px solid var(--cotton);
 }
 
 .detail-panel.open {
@@ -609,7 +609,7 @@
 
 .content-topic i {
     font-size: 18px;
-    color: var(--primary);
+    color: var(--purple);
     flex-shrink: 0;
 }
 
@@ -643,7 +643,7 @@
 
 .ai-use-row i {
     font-size: 17px;
-    color: var(--primary);
+    color: var(--purple);
     flex-shrink: 0;
 }
 
@@ -664,7 +664,7 @@
 .usage-stat-num {
     font-size: 22px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--purple);
 }
 
 .usage-stat-label {
@@ -692,7 +692,7 @@
 
 .panel-ai-header i {
     font-size: 22px;
-    color: var(--primary);
+    color: var(--purple);
 }
 
 .panel-ai-header-text {
@@ -734,7 +734,7 @@
 
 .panel-ai-result i {
     font-size: 15px;
-    color: var(--primary);
+    color: var(--purple);
     flex-shrink: 0;
     margin-top: 1px;
 }
@@ -746,7 +746,7 @@
     justify-content: center;
     gap: 8px;
     padding: 10px;
-    background: linear-gradient(135deg, var(--primary), #5b21b6);
+    background: linear-gradient(135deg, var(--purple), #5b21b6);
     border: none;
     border-radius: 9px;
     color: white;
@@ -770,7 +770,7 @@
     width: 16px;
     height: 16px;
     border: 2px solid #c4b5fd;
-    border-top-color: var(--primary);
+    border-top-color: var(--purple);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
@@ -822,7 +822,7 @@
 
 .permissions-banner i {
     font-size: 26px;
-    color: var(--accent-orange);
+    color: var(--orange);
 }
 
 .permissions-banner strong {
@@ -875,7 +875,7 @@
 }
 
 .upload-item:hover {
-    border-color: var(--primary);
+    border-color: var(--purple);
     background: var(--light-purple);
 }
 
@@ -918,7 +918,7 @@
 
 .upload-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--secondary), #6db35a);
+    background: linear-gradient(90deg, var(--military-green), #6db35a);
     border-radius: 2px;
     width: 0;
     transition: width 1.5s ease;
