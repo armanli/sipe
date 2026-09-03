@@ -613,18 +613,9 @@ body {
 }
 
 .chip-pulse {
-    animation: pulse-c 1.5s ease-in-out infinite;
+    animation: pulse-chip 1.5s ease-in-out infinite;
 }
 
-@keyframes pulse-c {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
 
 .institutional-doc {
     background: white;
@@ -753,14 +744,6 @@ body {
     animation: shimmer 1.2s ease infinite;
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
 
 .ai-overlay {
     display: none;
@@ -899,13 +882,6 @@ body {
     border-left: 4px solid var(--accent-orange);
 }
 
-
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .ai-step {
     font-size: 15px;
@@ -1091,24 +1067,23 @@ body {
     }
 }
 
-@keyframes pulse-chip {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
-
 @keyframes fadeInRight {
     from {
-        transform: translateX(16px);
+        transform: translateX(20px);
         opacity: 0;
     }
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
     }
 }
 
@@ -1118,6 +1093,22 @@ body {
     }
     to {
         opacity: 0;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-chip {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
     }
 }
 

@@ -462,16 +462,7 @@
     margin-top: 1px;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 
 .coord-plan-item {
     background: #f8fafc;
@@ -580,25 +571,7 @@
     opacity: 0.7;
 }
 
-@keyframes fadeInRight {
-    from {
-        transform: translateX(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
 
 .revision-item {
     background: #f8fafc;
@@ -737,11 +710,7 @@
     animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+
 
 .coord-view-trigger {
     display: flex;
@@ -797,17 +766,4 @@
 .filter-tab:hover:not(.active) {
     border-color: var(--purple);
     color: var(--purple);
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
 }

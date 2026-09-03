@@ -115,7 +115,7 @@
 }
 
 .chip-pulse {
-    animation: pulse-c 1.5s ease-in-out infinite;
+    animation: pulse-chip 1.5s ease-in-out infinite;
 }
 
 .doc-bar-right {
