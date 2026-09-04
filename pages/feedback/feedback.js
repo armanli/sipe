@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function selectPlan(id) {
     selectedPlan = id;
-    document.querySelectorAll(".plan-card")
+    document.querySelectorAll(".planning-card")
         .forEach((c) => c.classList.remove("selected"));
     const card = document.getElementById("plan" + id);
     if (card) card.classList.add("selected");
@@ -293,15 +293,15 @@ function renderTimeline(steps) {
     container.innerHTML = steps
         .map((s) => `
       <div class="timeline-item">
-        <div class="tl-dot-col">
-          <div class="tl-dot ${s.status}">
+        <div class="timeline-dot-col">
+          <div class="timeline-dot ${s.status}">
             <i class="ti ${s.icon}" style="font-size:15px"></i>
           </div>
-          <div class="tl-line"></div>
+          <div class="timeline-line"></div>
         </div>
-        <div class="tl-content">
-          <div class="tl-title">${s.title}</div>
-          <div class="tl-date">${s.date}</div>
+        <div class="timeline-content">
+          <div class="timeline-title">${s.title}</div>
+          <div class="timeline-date">${s.date}</div>
         </div>
       </div>
     `,).join("");
@@ -436,9 +436,9 @@ document
     });
 
 function coordAction(btn, action) {
-    const item = btn.closest(".coord-plan-item");
+    const item = btn.closest(".coordination-plan-item");
     const badge = item.querySelector(".status-badge");
-    const actions = item.querySelector(".coord-actions");
+    const actions = item.querySelector(".coordination-actions");
 
     if (action === "aprovado") {
         badge.className = "status-badge approved";
