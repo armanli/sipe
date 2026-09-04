@@ -16,13 +16,14 @@
     --alert: #e11d48;
     --warning: #fde047;
     --brown: #4A3833;
+    --amber: #A16207;
 
-    --light-green: rgb(134 239 172 / 0.66);
+    --light-green: #DCFCE7;
     --light-purple: #e0dcf8;
     --light-blue: #8ba3e1;
     --light-orange: #dda787;
-    --light-yellow: #e1ce89;
-    --light-red: #e48383;
+    --light-yellow: #FEF9C3;
+    --light-red: #FFF5F5;
 
     --status-approved-bg: #dcfce7;
     --status-approved-text: #15803d;
@@ -300,10 +301,6 @@ body {
 
 .icon {
     font-size: 14px;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .flow-step {
@@ -1024,6 +1021,16 @@ body {
     display: flex;
 }
 
+.purple-element{
+    padding: 14px 16px;
+    background: #f5f3ff;
+    border-radius: 10px;
+    border: 1px solid #c4b5fd;
+    font-size: 13px;
+    color: #4c1d95;
+    margin-top: 20px;
+}
+
 .small-icon {
     font-size: 14px;
 }
@@ -1037,7 +1044,23 @@ body {
 }
 
 .purple {
-    color: var(--purple);
+    color: var(--purple) ;
+}
+
+.green {
+    color: var(--green) !important;
+}
+
+.red {
+    color: var(--alert) !important;
+}
+
+.amber {
+    color: var(--amber) !important;
+}
+
+.bg-light-purple {
+    background: var(--light-purple) !important;
 }
 
 .bg-light-blue {
@@ -1045,7 +1068,7 @@ body {
 }
 
 .bg-light-green {
-    background-color: var(--light-green);
+    background-color: var(--light-green) !important;
 }
 
 .bg-light-orange {
@@ -1053,7 +1076,19 @@ body {
 }
 
 .bg-light-red {
-    background-color: var(--light-red);
+    background-color: var(--light-red) !important;
+}
+
+.bg-light-yellow {
+    background-color: var(--light-yellow) !important;
+}
+
+.border-green {
+    border-color: var(--green) !important;
+}
+
+.border-red {
+    border-color: var(--alert) !important;
 }
 
 @keyframes slideUp {
