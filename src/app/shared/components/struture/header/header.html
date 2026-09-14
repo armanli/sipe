@@ -1,0 +1,55 @@
+<div class="header">
+  <div class="switch-options">
+    <label for="selector-school"></label>
+    <select id="selector-school" class="school-selector" onchange="handleSchoolChange(this)">
+      <option value="cavlac">Colégio Cavlac</option>
+      <option value="anglo">Colégio Anglo</option>
+      <option value="estadual">E.E. Prof. Silva Neto</option>
+    </select>
+
+    <div class="chips">
+      <div class="system-chip purple-element">
+        <i class="ti ti-school"></i>
+        <strong>Sistema Anglo</strong>
+      </div>
+      <div class="system-chip green-element">
+        <i class="ti ti-calendar-check"></i>
+        <span>2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="information-options">
+    <div class="buttons">
+      <button class="notifications-button">
+        <i class="ti ti-bell"></i>
+        <strong class="quantity-notification-container">2</strong>
+      </button>
+
+      <button class="button-admin" onclick="openAdminModal()">
+        <i class="ti ti-settings-2"></i>
+        <strong>Gestão de Conteúdos</strong>
+      </button>
+
+      <button class="button-admin" onclick="openCoordModal()">
+        <i class="ti ti-user-shield"></i>
+        <strong>Visualizar como Coordenador</strong>
+      </button>
+    </div>
+
+    <div class="profile">
+      <div class="left">
+        <strong>Ano Letivo 2026</strong>
+        <div>2.º Bimestre · Semana 22</div>
+      </div>
+
+      <div class="right">
+        <strong class="avatar">PE</strong>
+        <div>
+          <div>Profª Elisabete</div>
+          <div>História · Geografia · Artes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

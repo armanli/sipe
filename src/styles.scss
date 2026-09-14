@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satisfy&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@
   --light-blue: #8ba3e1;
   --light-green: #DCFCE7;
   --light-red: #fee2e2;
-  --light-orange: #dda787;
+  --light-orange: #FFECE1;
   --light-yellow: #FEF9C3;
   --light-cotton: #F8FAFC;
 
@@ -47,13 +47,14 @@
   --radius: 15px;
   --square-radius: 5px;
   --text-size: 20px;
+  --smallest-text-size: 12px;
   --smaller-text-size: 16px;
   --larger-text-size: 24px;
 }
 
 html, body {
-  height: 100vh;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   background: color-mix(
     in oklab,
     var(--cotton),
@@ -71,123 +72,12 @@ html, body {
   overflow: auto;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-  height: 75px;
-  padding: 0 30px;
-  border-bottom: 2px solid var(--cotton);
-  background: var(--white);
-}
-
 .page-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-.school-selector {
-  padding: 10px 20px;
-  border: 2px solid var(--navy-blue);
-  border-radius: var(--radius);
-  color: var(--navy-blue);
-  font-size: var(--smaller-text-size);
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.school-selector:focus {
-  border-color: var(--dark-green);
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-right .header-info {
-  color: var(--muted);
-  font-size: calc(var(--smaller-text-size) - 2px);
-  font-weight: bold;
-}
-
-.header-right .header-info strong {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
-}
-
-.header-right .header-info h4 {
-  color: var(--black);
-}
-
-.navigation-icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 55px;
-  aspect-ratio: 1;
-  border: 2px solid var(--orange);
-  border-radius: var(--radius);
-  background: color-mix(in oklab,
-  var(--orange),
-  var(--white) 90%);
-  cursor: pointer;
-  position: relative;
-}
-
-.navigation-icon-button i {
-  color: var(--orange);
-  font-size: var(--larger-text-size);
-}
-
-.badge-orange {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  aspect-ratio: 1;
-  border: 2px solid var(--orange);
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--orange);
-  font-size: calc(var(--smaller-text-size) - 2px);
-  font-weight: bold;
-}
-
-.user-profile-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: var(--smaller-text-size);
-  font-weight: bold;
-}
-
-.user-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 45px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--dark-green);
-  color: var(--white);
-  font-weight: bold;
-}
 
 .page-container {
   display: flex;
@@ -921,13 +811,15 @@ html, body {
 }
 
 .purple-element {
-  padding: 14px 16px;
   border: 1px solid var(--purple-border);
-  border-radius: var(--radius);
-  margin-top: 20px;
   background: var(--light-purple);
   color: var(--purple);
-  font-size: calc(var(--smaller-text-size) - 4px);
+}
+
+.green-element {
+  border: 1px solid var(--green-border);
+  background: var(--light-green);
+  color: var(--green);
 }
 
 i {
