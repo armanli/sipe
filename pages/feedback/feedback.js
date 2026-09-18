@@ -421,20 +421,6 @@ function toggleNotifPanel() {
     }
 }
 
-function openCoordModal() {
-    document.getElementById("coordModal").classList.add("open");
-}
-
-function closeCoordModal() {
-    document.getElementById("coordModal").classList.remove("open");
-}
-
-document
-    .getElementById("coordModal")
-    .addEventListener("click", function (e) {
-        if (e.target === this) closeCoordModal();
-    });
-
 function coordAction(btn, action) {
     const item = btn.closest(".coordination-plan-item");
     const badge = item.querySelector(".status-badge");
