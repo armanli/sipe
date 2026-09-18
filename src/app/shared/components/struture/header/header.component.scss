@@ -121,11 +121,15 @@
       text-align: right;
     }
 
-    .right{
+    .right {
       display: flex;
       align-items: center;
       gap: 10px;
       flex-shrink: 0;
+
+      a {
+         text-decoration: none;
+      }
     }
 
     .avatar {

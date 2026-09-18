@@ -1,9 +1,11 @@
 .sidebar {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   width: var(--sidebar-w);
-  height: 100%;
+  height: 100vh;
   background: var(--navy-blue);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
