@@ -1,14 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {Sidebar} from './shared/components/struture/sidebar/sidebar';
-import {Header} from './shared/components/struture/header/header';
+import { SidebarComponent } from './shared/components/struture/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/components/struture/header/header.component';
 
 @Component({
-  imports: [RouterOutlet, Sidebar, Header],
   selector: 'app-root',
-  styleUrl: './app.scss',
+  standalone: true,
+  imports: [RouterOutlet, SidebarComponent, HeaderComponent],
   templateUrl: './app.html',
+  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('sipe');
-}
+export class App {}
