@@ -274,28 +274,6 @@ function selectPlan(id) {
   document.getElementById('notifCard').style.display = id === 1 ? 'block' : 'none';
 }
 
-function renderTimeline(steps) {
-  const container = document.getElementById('timelineContent');
-  container.innerHTML = steps
-    .map(
-      (s) => `
-      <div class="timeline-item">
-        <div class="timeline-dot-col">
-          <div class="timeline-dot ${s.status}">
-            <i class="ti ${s.icon}" style="font-size:15px"></i>
-          </div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-title">${s.title}</div>
-          <div class="timeline-date">${s.date}</div>
-        </div>
-      </div>
-    `,
-    )
-    .join('');
-}
-
 function renderRevisions(revisions) {
   const container = document.getElementById('revisionsContent');
   container.innerHTML = revisions

@@ -1,0 +1,23 @@
+<div class="timeline">
+  <div class="title">
+    <i class="ti ti-timeline purple"></i>
+    <span>Timeline de Aprovação</span>
+  </div>
+  <div>
+
+    @for (timeline of timelines; track timeline) {
+      <div class="item">
+        <div class="vertical-line">
+          <div class="icon-container {{ timeline.status }}">
+            <i class="small-icon ti {{timeline.icon}}"></i>
+          </div>
+          <div class="vertical-line-content"></div>
+        </div>
+        <div>
+          <div class="label">{{ timeline.title }}</div>
+          <div class="date">{{ timeline.date }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
