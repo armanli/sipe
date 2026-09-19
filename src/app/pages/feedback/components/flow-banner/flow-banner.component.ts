@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   imports: [],
   selector: 'flow-banner',
-  styleUrl: './flow-banner.components.scss',
-  templateUrl: './flow-banner.components.html',
+  styleUrl: './flow-banner.component.scss',
+  templateUrl: './flow-banner.component.html',
+  standalone: true,
 })
-export class FlowBannerComponents {
+export class FlowBannerComponent {
   protected flows = new Array<FlowStep>(
     {
       label: 'Professor Cria',
