@@ -34,18 +34,6 @@ const planData = {
         date: '—',
       },
     ],
-    revisions: [
-      {
-        version: 'Versão 1',
-        date: '11/05/2026',
-        comment: '"Adicionar atividade prática na quinta-feira."',
-      },
-      {
-        version: 'Versão atual',
-        date: '12/05/2026',
-        comment: '"Aguardando aplicação das correções solicitadas."',
-      },
-    ],
     aiPrompt:
       'A coordenação solicitou atividade prática e reforço em sistema monetário. Deseja gerar sugestões pedagógicas?',
     aiSuggestions: [

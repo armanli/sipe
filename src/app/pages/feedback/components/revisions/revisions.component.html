@@ -1,0 +1,17 @@
+<div class="revisions">
+  <div class="title">
+    <i class="purple ti ti-versions"></i>
+    <span>Histórico de Revisões</span>
+  </div>
+  <div>
+    @for (revision of revisions; track revision) {
+      <div class="item">
+        <div class="revision">
+          <span class="version">{{ revision.version }}</span>
+          <span class="date">{{ revision.date }}</span>
+        </div>
+        <div class="comment">{{ revision.comment }}</div>
+      </div>
+    }
+  </div>
+</div>

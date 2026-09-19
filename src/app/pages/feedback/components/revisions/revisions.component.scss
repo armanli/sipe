@@ -1,0 +1,57 @@
+@use "../../../../../styles";
+
+.revisions {
+  padding: 20px;
+  border: 2px solid var(--cotton);
+  border-radius: var(--radius);
+  background: var(--light-cotton);
+  cursor: pointer;
+  transition: all 0.25s;
+  overflow: hidden;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--navy-blue);
+    font-size: var(--smaller-text-size);
+    font-weight: bold;
+  }
+
+  .item {
+    padding: 14px 16px;
+    border: 1px solid var(--cotton);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    background: var(--light-cotton);
+    transition: all 0.5s;
+  }
+
+  .item:hover {
+    @extend .purple-element;
+  }
+
+  .revision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .version {
+    color: var(--purple);
+    font-size: var(--smallest-text-size);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .date, .comment {
+    color: var(--muted);
+    font-size: var(--smallest-text-size);
+  }
+}
+
+.revisions:hover {
+  border-color: var(--purple);
+  transform: translateX(3px);
+}
