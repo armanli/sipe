@@ -2,38 +2,6 @@ const planData = {
   1: {
     title: 'Planejamento Semanal — Matemática',
     status: 'pending',
-    timeline: [
-      {
-        status: 'done',
-        icon: 'ti-circle-plus',
-        title: 'Planejamento Criado',
-        date: '10/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-send',
-        title: 'Enviado para Coordenação',
-        date: '11/05/2026',
-      },
-      {
-        status: 'pending',
-        icon: 'ti-clock-edit',
-        title: 'Ajustes Solicitados',
-        date: '12/05/2026',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-pencil',
-        title: 'Correções Aplicadas',
-        date: '—',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-circle-check',
-        title: 'Aprovação Final',
-        date: '—',
-      },
-    ],
     aiPrompt:
       'A coordenação solicitou atividade prática e reforço em sistema monetário. Deseja gerar sugestões pedagógicas?',
     aiSuggestions: [
@@ -54,100 +22,12 @@ const planData = {
   2: {
     title: 'Planejamento Semanal — História',
     status: 'approved',
-    timeline: [
-      {
-        status: 'done',
-        icon: 'ti-circle-plus',
-        title: 'Planejamento Criado',
-        date: '05/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-send',
-        title: 'Enviado para Coordenação',
-        date: '06/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-clock-edit',
-        title: 'Ajustes Solicitados',
-        date: '07/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-pencil',
-        title: 'Correções Aplicadas',
-        date: '08/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-circle-check',
-        title: 'Aprovado',
-        date: '08/05/2026',
-      },
-    ],
-    revisions: [
-      {
-        version: 'Versão 1',
-        date: '06/05/2026',
-        comment: '"Aprofundar análise das causas da 2ª Guerra Mundial."',
-      },
-      {
-        version: 'Versão 2',
-        date: '07/05/2026',
-        comment: '"Incluir fonte primária como documento de análise."',
-      },
-      {
-        version: 'Versão 3 — Aprovada',
-        date: '08/05/2026',
-        comment: '"Planejamento aprovado sem ressalvas. Excelente estrutura BNCC."',
-      },
-    ],
     aiPrompt: null,
     aiSuggestions: [],
   },
   3: {
     title: 'Planejamento Bimestral — Artes',
     status: 'rejected',
-    timeline: [
-      {
-        status: 'done',
-        icon: 'ti-circle-plus',
-        title: 'Planejamento Criado',
-        date: '26/04/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-send',
-        title: 'Enviado para Coordenação',
-        date: '27/04/2026',
-      },
-      {
-        status: 'rejected',
-        icon: 'ti-x',
-        title: 'Rejeitado pela Coordenação',
-        date: '29/04/2026',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-refresh',
-        title: 'Aguardando Reenvio',
-        date: '—',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-circle-check',
-        title: 'Aprovação Final',
-        date: '—',
-      },
-    ],
-    revisions: [
-      {
-        version: 'Versão 1 — Rejeitada',
-        date: '29/04/2026',
-        comment: '"Objetivos não alinhados ao PPP. Falta estratégia de recuperação."',
-      },
-    ],
     aiPrompt:
       'O planejamento foi rejeitado por desalinhamento com o PPP. Deseja sugestões para reestruturação?',
     aiSuggestions: [
@@ -168,45 +48,6 @@ const planData = {
   4: {
     title: 'Planejamento Semanal — Geografia',
     status: 'pending',
-    timeline: [
-      {
-        status: 'done',
-        icon: 'ti-circle-plus',
-        title: 'Planejamento Criado',
-        date: '19/05/2026',
-      },
-      {
-        status: 'done',
-        icon: 'ti-send',
-        title: 'Enviado para Coordenação',
-        date: '20/05/2026',
-      },
-      {
-        status: 'pending',
-        icon: 'ti-clock-edit',
-        title: 'Ajustes Solicitados',
-        date: '21/05/2026',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-pencil',
-        title: 'Correções Aplicadas',
-        date: '—',
-      },
-      {
-        status: 'upcoming',
-        icon: 'ti-circle-check',
-        title: 'Aprovação Final',
-        date: '—',
-      },
-    ],
-    revisions: [
-      {
-        version: 'Versão 1',
-        date: '20/05/2026',
-        comment: '"Incluir estratégia diferenciada para alunos com dificuldade."',
-      },
-    ],
     aiPrompt:
       'A coordenação solicitou estratégia diferenciada. Deseja gerar sugestões de atividades de recuperação?',
     aiSuggestions: [
@@ -260,23 +101,6 @@ function selectPlan(id) {
   }
 
   document.getElementById('notifCard').style.display = id === 1 ? 'block' : 'none';
-}
-
-function renderRevisions(revisions) {
-  const container = document.getElementById('revisionsContent');
-  container.innerHTML = revisions
-    .map(
-      (r) => `
-      <div class="revision-item">
-        <div class="revision-header">
-          <span class="revision-version">${r.version}</span>
-          <span class="revision-date">${r.date}</span>
-        </div>
-        <div class="revision-comment">${r.comment}</div>
-      </div>
-    `,
-    )
-    .join('');
 }
 
 function generateSuggestions() {
