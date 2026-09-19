@@ -241,15 +241,6 @@ const planData = {
 let selectedPlan = null;
 let suggestionsGenerated = {};
 
-document.addEventListener('DOMContentLoaded', () => {
-  const kpis = document.querySelectorAll('.kpi-card');
-  kpis.forEach((kpi, i) => {
-    setTimeout(() => kpi.classList.add('visible'), 150 + i * 100);
-  });
-
-  selectPlan(1);
-});
-
 function selectPlan(id) {
   selectedPlan = id;
   document.querySelectorAll('.planning-card').forEach((c) => c.classList.remove('selected'));

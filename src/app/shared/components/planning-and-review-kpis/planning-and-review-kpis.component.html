@@ -1,0 +1,46 @@
+<section class="kpi-grid">
+  <div class="card approvedPlans">
+    <div class="icon bg-light-green green">
+      <i class="ti ti-circle-check-filled"></i>
+    </div>
+    <div>
+      <data class="number green" value="{{ kpis.approvedPlans }}">
+        {{ kpis.approvedPlans }}
+      </data>
+      <span class="label">Planejamentos Aprovados</span>
+    </div>
+  </div>
+  <div class="card plansWaitingAdjustments">
+    <div class="icon bg-light-yellow amber">
+      <i class="ti ti-clock-edit"></i>
+    </div>
+    <div>
+      <data class="number amber" value="{{kpis.plansWaitingAdjustment}}">
+        {{ kpis.plansWaitingAdjustment }}
+      </data>
+      <span class="label">Aguardando Ajustes</span>
+    </div>
+  </div>
+  <div class="card rejectedPlans">
+    <div class="icon bg-light-red red">
+      <i class="ti ti-circle-x-filled"></i>
+    </div>
+    <div>
+      <data class="number red" value="{{kpis.rejectedPlans}}">
+        {{ kpis.rejectedPlans }}
+      </data>
+      <span class="label">Rejeitados</span>
+    </div>
+  </div>
+  <div class="card approvedReviews">
+    <div class="icon bg-light-purple purple">
+      <i class="ti ti-file-certificate"></i>
+    </div>
+    <div>
+      <data class="number purple" value="{{kpis.approvedReview}}">
+        {{ kpis.approvedReview }}
+      </data>
+      <span class="label">Avaliações Aprovadas</span>
+    </div>
+  </div>
+</section>
