@@ -1,0 +1,28 @@
+<section class="flow-banner">
+  @for (flow of flows; track flow) {
+    @let position = flows.indexOf(flow) + 1;
+
+    @if (position > 1) {
+      <div class="arrow">›</div>
+    }
+
+    @if (flow.isDone) {
+      <div class="item done">
+        <span class="number">
+          <i class="ti ti-check"></i>
+        </span>
+        <span>{{ flow.label }}</span>
+      </div>
+    } @else if (flow.isActual) {
+      <div class="item active">
+        <span class="number">{{ position }}</span>
+        <span>{{ flow.label }}</span>
+      </div>
+    } @else {
+      <div class="item">
+        <div class="number">{{ position }}</div>
+        <span> {{ flow.label }}</span>
+      </div>
+    }
+  }
+</section>
